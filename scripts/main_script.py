@@ -104,7 +104,7 @@ def predict_results(league):
         results = pd.concat([results, results2], axis=0,ignore_index=True)
         results.rename(columns={'HomeTeam':'Team'}, inplace=True)
         #results['Date'] = pd.to_datetime(results['Date'], format='%d/%m/%y')
-        results = results.sort_values(by=['Date'], ascending=False)
+        results = results.sort_values(by=['Date'], ascending=True)
         
         
         #############################################################
